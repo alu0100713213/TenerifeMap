@@ -1,0 +1,58 @@
+.mapcontainer 
+{
+	max-width: 50%;
+	margin:auto;
+
+}
+#map 
+{
+	position: relative;
+    left: -10%;
+    margin: auto;
+	height: 750px;
+	width: 800px;
+}
+
+
+body {
+	font-family:Helvetica,Arial,sans-serif;
+	background-image: url("http://www.gersa.com/images/fondo.jpg");
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;	
+	background-size: 100%
+}
+
+#titulo {
+	color:#5d5d5d;
+	font-size:45px;
+    text-align: center;
+	font-family: Berlin Sans FB;
+}
+
+#informacion{
+	position: absolute;
+	left: 65%;
+	top: 65px;
+	margin: auto;
+	font-size: 20px;
+	margin-right: 10%; 
+}
+
+#fotos{
+	float: left;
+}
+
+#autor{
+	font-size: 18px;
+	position: absolute;
+	left: 80%;
+	top: 80%;
+}
+
+#ayuda{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	margin: auto;
+}
