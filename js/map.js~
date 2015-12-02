@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	  window.addEventListener('load', function(){TenerifeMap()}, false); //true means that this request will be ignored if auto is set to off
+
 });
 
 function TenerifeMap(){
@@ -106,16 +107,20 @@ var fotos = [
 ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Granadilla_BW_1.JPG/300px-Granadilla_BW_1.JPG','http://adondevamoshoytenerife.com/wp-content/uploads/2014/06/MG_4998.jpg','http://costasanmiguel.com/static_media/cms_page_media/ccv_costasanmiguel_com/gallery/SM_82.jpg',['http://caucesur.com/imagenes/San%20Miguel%20de%20Abona.jpg']],
 []
 ];	
-	var location_set=rsr.set();
-	for (var location in locations){
-		var loc=locations[location];
-		var loc_obj=rsr.circle(loc.lat, loc.lng, 10).attr({fill: loc.color, stroke: 'white', 'stroke-width': 2, cursor: 'pointer'}).scale(scale, scale, 0, 0);
-		loc_obj.name=loc.name;
-		loc_obj.url=loc.url;
-		loc_obj.img=loc.img;
-		loc_obj.x=xy.x;
-		loc_obj.y=xy.y;
-		location_set.push(loc_obj);			
+
+var points = [];
+var circle1 = rsr.circle(600,200,15);
+var circle2 = rsr.circle(320,440,15);
+circle1.attr("fill", 'green');	
+circle2.attr("fill", 'green');	
+points.push(circle1);
+points.push(circle2);
+
+	for (var j = 0; j < points.length; j++) {
+		points[j].mousedown(function(e)
+		{
+			alert("message");
+		});
 	}
 
 	for (var i = 0; i < regions.length; i++) {
@@ -193,25 +198,4 @@ var fotos = [
 	}		
 
 };
-
-
-var locations={
-	0: { 
-		name: 'Paris',
-		lat: 600,
-		lng: 200,
-		color: 'red',
-		url: 'http://www.flickr.com/photos/wlappe/2903363114/sizes/l/in/photostream/',
-		img: 'paris'
-	},
-	1: { 
-		name: 'sosos',
-		lat: 600,
-		lng: 400,
-		color: 'blue',
-		url: 'http://www.flickr.com/photos/wlappe/2903363114/sizes/l/in/photostream/',
-		img: 'paris'
-	}
-}
-
 

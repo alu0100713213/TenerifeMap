@@ -106,6 +106,22 @@ var fotos = [
 ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Granadilla_BW_1.JPG/300px-Granadilla_BW_1.JPG','http://adondevamoshoytenerife.com/wp-content/uploads/2014/06/MG_4998.jpg','http://costasanmiguel.com/static_media/cms_page_media/ccv_costasanmiguel_com/gallery/SM_82.jpg',['http://caucesur.com/imagenes/San%20Miguel%20de%20Abona.jpg']],
 []
 ];	
+
+var points = [];
+var circle1 = rsr.circle(600,200,15);
+var circle2 = rsr.circle(320,440,15);
+circle1.attr("fill", 'green');	
+circle2.attr("fill", 'green');	
+points.push(circle1);
+points.push(circle2);
+
+	for (var j = 0; j < points.length; j++) {
+		points[j].mousedown(function(e)
+		{
+			alert("message");
+		});
+	}
+
 	for (var i = 0; i < regions.length; i++) {
 		regions[i].mouseover(function(e)
 		{
@@ -181,25 +197,4 @@ var fotos = [
 	}		
 
 };
-
-
-var locations={
-	0: { 
-		name: 'Paris',
-		lat: 600,
-		lng: 200,
-		color: 'red',
-		url: 'http://www.flickr.com/photos/wlappe/2903363114/sizes/l/in/photostream/',
-		img: 'paris'
-	},
-	1: { 
-		name: 'sosos',
-		lat: 600,
-		lng: 400,
-		color: 'blue',
-		url: 'http://www.flickr.com/photos/wlappe/2903363114/sizes/l/in/photostream/',
-		img: 'paris'
-	}
-}
-
 
