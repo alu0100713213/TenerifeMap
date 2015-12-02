@@ -1,6 +1,15 @@
 $(document).ready(function () {
-	  window.addEventListener('load', function(){TenerifeMap()}, false); //true means that this request will be ignored if auto is set to off
-
+$.fancybox(
+		'<h2>Bienvenido al mapa interactivo de Tenerife!</h2><br><p>En este mapa encontrara diversa información acerca de la isla</p><ul><li>Playas</li><li>Lugares de Interés</li><li>Senderos</li><li>Rutas en Bici</li><li>Miradores</li></ul><br><br><img src="http://servizitenerife.com/wp-content/uploads/2014/07/tenerife.jpg">',
+		{
+        		'autoDimensions'	: false,
+			'width'         		: 420,
+			'height'        		: 'auto',
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none'
+		}
+	);
+	window.addEventListener('load', function(){TenerifeMap()}, false); //true means that this request will be ignored if auto is set to off
 });
 
 function TenerifeMap(){
@@ -119,7 +128,18 @@ points.push(circle2);
 	for (var j = 0; j < points.length; j++) {
 		points[j].mousedown(function(e)
 		{
-			alert("message");
+			$.fancybox(
+			'<h2>El Macizo de Anaga</h2><p>El macizo de Anaga es una formación montañosa y región histórica del nordeste de la isla canaria de Tenerife, España. Es el lugar que cuenta con mayor cantidad de endemismos de Europa1 y fue nombrado Reserva de la Biosfera por la UNESCO el 9 de junio de 2015</p><p>Abarca el término municipal de Santa Cruz de Tenerife y, parcialmente, los de San Cristóbal de La Laguna y Tegueste, alcanzando una altitud máxima de 1.024 msnm en la Cruz de Taborno. Se extiende desde la Punta de Anaga, en el noreste, hasta la Cruz del Carmen, en dirección suroeste, reuniendo los roques y picos de Bichuelo, Anambro, Chinobre, Pico Limante, Pico del Inglés, Cruz de Taborno y la propia Cruz del Carmen. Con una antigüedad estimada de entre 7 y 9 millones de años, es una de las zonas más antiguas de la isla.</p><table style="width:60%"><tr><td><img src="http://www.webtenerife.com/es/que-visitar/otros-espacios-naturales/publishingimages/parque-rural-anaga-fc.jpg"></td><td><img src="http://www.rutasaragon.net/wp-content/themes/Kicaweb/images/ruta-bici.png"><h3> Rutas en Bici (8)</h3><br><img src="http://www.rutasaragon.net/wp-content/themes/Kicaweb/images/ruta-pie.png"><h3>Senderos (15)</h3><img src="http://i.ebayimg.com/00/s/MTMwMVgxMzAx/z/LFMAAOSwAYtWGiXj/$_14.JPG"> <h3> Playas (6) </h3> </td></tr></table>',
+			{
+				'autoDimensions'	: false,
+				'width'         		: 420,
+				'height'        		: '600',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			}
+			);
+
+		//	alert("message");
 		});
 	}
 
