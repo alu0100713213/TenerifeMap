@@ -51,10 +51,10 @@ Elpaso.data{(‘region’: ‘El Paso’, ‘poblacion’: ‘Población: xxxx�
 ###### PASO 5: Eventos de Teclado y Ratón
 
 Por ultimo añadimos los eventos de teclado y raton. En este ejemplo hemos añadido únicamente dos eventos.
-•	Mouseover(function(x){ … }
+-	Mouseover(function(x){ … }
 Mediante este evento capturamos el ratón cada vez que entra en una región que está en nuestro vector regions. 
 Este evento llama a las diferentes funciones getElementById para mostrar la información en la parte derecha. También cambia la opacidad de la región para crear un efecto de fundido.
-•	Mouseout(function(x){ … }
+-	Mouseout(function(x){ … }
 Este evento se ejecuta cuando sale el ratón de la sección. Para el ejemplo se le modifica la opacidad del fondo, dejándola por defecto.
 
 ## 4. Links de Interes
